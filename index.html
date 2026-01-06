@@ -1,1 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venecore – Digital Infrastructure Platform</title>
 
+<style>
+:root{
+  --bg:#0b0f1a;
+  --card:#11162a;
+  --accent:#3b82f6;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --up:#22c55e;
+  --down:#ef4444;
+}
+
+*{box-sizing:border-box;font-family:Inter,Arial,Helvetica,sans-serif}
+
+body{
+  margin:0;
+  background:radial-gradient(circle at top,#141a33,var(--bg));
+  color:var(--text);
+}
+
+/* ===== LAYOUT ===== */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+/* ===== HERO ===== */
+.header{
+  text-align:center;
+  max-width:900px;
+  margin:0 auto 60px;
+}
+
+.header h1{
+  font-size:2.4rem;
+  margin-bottom:10px;
+}
+
+.header h2{
+  font-size:1.3rem;
+  color:var(--accent);
+  margin-bottom:16px;
+}
+
+.header p{
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px;
+  margin-bottom:80px;
+}
+
+/* ===== CARD ===== */
+.card{
+  background:linear-gradient(180deg,#151b35,var(--card));
+  border-radius:18px;
+  padding:30px 26px;
+  border:1px solid rgba(255,255,255,.06);
+  position:relative;
+  overflow:hidden;
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent,rgba(59,130,246,.18),transparent);
+  opacity:0;
+  transition:opacity .35s ease;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+.card:hover::after{opacity:1}
+
+.card h3{
+  font-size:1.25rem;
+  margin-bottom:12px;
+}
+
+.card p{
+  color:var(--muted);
+  line-height:1.6;
+  font-size:.95rem;
+}
+
+/* ===== BADGE ===== */
+.badge{
+  display:inline-block;
+  margin-top:18px;
+  padding:7px 14px;
+  font-size:.75rem;
+  letter-spacing:.05em;
+  border-radius:999px;
+  background:rgba(59,130,246,.15);
+  color:var(--accent);
+  border:1px solid rgba(59,130,246,.35);
+}
+
+/* ===== MARKET ===== */
+.market-section{
+  background:linear-gradient(180deg,#151b35,var(--card));
+  border-radius:18px;
+  padding:34px;
+  border:1px solid rgba(255,255,255,.06);
+}
+
+.market-title{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  margin-bottom:12px;
+}
+
+.market-note,
+.last-update{
+  text-align:center;
+  color:var(--muted);
+  font-size:.85rem;
+  margin-bottom:14px;
+}
+
+.live-badge{
+  padding:4px 10px;
+  font-size:.7rem;
+  border-radius:999px;
+  background:rgba(34,197,94,.15);
+  color:var(--up);
+  border:1px solid rgba(34,197,94,.35);
+}
+
+.pulse{
+  width:8px;
+  height:8px;
+  background:var(--up);
+  border-radius:50%;
+  animation:pulse 1.4s infinite;
+}
+
+@keyframes pulse{
+  0%{opacity:.3}
+  50%{opacity:1}
+  100%{opacity:.3}
+}
+
+/* ===== TABLE ===== */
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th,td{
+  padding:12px 10px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+th{
+  font-size:.85rem;
+  color:var(--muted);
+  text-align:left;
+}
+
+.up{color:var(--up)}
+.down{color:var(--down)}
+
+.price-up{background:rgba(34,197,94,.12)}
+.price-down{background:rgba(239,68,68,.12)}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  margin-top:80px;
+  font-size:.85rem;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="header">
+    <h1>Platform Under Construction</h1>
+    <h2>Venecore Roadmap & Scaling</h2>
+    <p>
+      Building an integrated digital infrastructure platform for the next-generation
+      crypto ecosystem — combining exchange and wallet technology, energy-backed
+      mining operations, enterprise-grade data center services, and scalable SaaS
+      solutions designed for long-term growth and institutional deployment.
+    </p>
+  </div>
+
+  <!-- PLATFORM MODULES -->
+  <div class="grid">
+
+    <div class="card">
+      <h3>Exchange / Wallet & Trading</h3>
+      <p>
+        Secure and scalable digital asset exchange with integrated wallet
+        infrastructure, supporting liquidity management, professional trading
+        workflows, and compliance-ready expansion.
+      </p>
+      <span class="badge">Under Construction</span>
+    </div>
+
+    <div class="card">
+      <h3>Mining Pool</h3>
+      <p>
+        Energy-optimized mining pool with transparent reward distribution,
+        real-time analytics, and scalable hash-rate management aligned with
+        sustainable operations.
+      </p>
+      <span class="badge">Under Construction</span>
+    </div>
+
+    <div class="card">
+      <h3>Data Center</h3>
+      <p>
+        Enterprise-grade infrastructure including dedicated servers, VPS, and
+        colocation services engineered for mining, blockchain, and HPC workloads.
+      </p>
+      <span class="badge">Hosting · VPS · Colocation</span>
+    </div>
+
+    <div class="card">
+      <h3>SaaS Platform</h3>
+      <p>
+        Cloud-based SaaS solutions for monitoring, automation, analytics, and
+        operational optimization across digital asset and energy infrastructure.
+      </p>
+      <span class="badge">Under Construction</span>
+    </div>
+
+  </div>
+
+  <!-- LIVE MARKET -->
+  <div class="market-section">
+
+    <div class="market-title">
+      <span class="pulse"></span>
+      <h2>Live Crypto Market</h2>
+      <span class="live-badge">LIVE</span>
+    </div>
+
+    <div class="market-note">
+      Market prices are updated automatically in near real-time.
+      Data shown is indicative and for informational purposes only.
+    </div>
+
+    <div class="last-update" id="lastUpdate">Initializing market feed…</div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Asset</th>
+          <th>Price (USD)</th>
+          <th>24h</th>
+        </tr>
+      </thead>
+      <tbody id="market"></tbody>
+    </table>
+
+  </div>
+
+  <footer>
+    © 2026 Venecore Digital Infrastructure. All rights reserved.
+  </footer>
+
+</div>
+
+<script>
+const coins=[
+ "bitcoin","ethereum","binancecoin","solana","ripple",
+ "cardano","dogecoin","avalanche-2","polkadot","tron",
+ "polygon","chainlink","litecoin","bitcoin-cash","cosmos",
+ "ethereum-classic","stellar","internet-computer","aptos","near"
+];
+
+const market=document.getElementById("market");
+const lastUpdate=document.getElementById("lastUpdate");
+let prevPrices={};
+
+async function loadPrices(){
+ try{
+  const res=await fetch(
+   "https://api.coingecko.com/api/v3/coins/markets"+
+   "?vs_currency=usd&ids="+coins.join(",")+
+   "&price_change_percentage=24h"
+  );
+  const data=await res.json();
+  market.innerHTML="";
+
+  let apiTime=null;
+
+  data.forEach(c=>{
+    const prev=prevPrices[c.id];
+    const curr=c.current_price;
+    let cls="";
+    if(prev){ cls=curr>prev?"price-up":"price-down"; }
+    prevPrices[c.id]=curr;
+    apiTime=c.last_updated;
+
+    const chg=c.price_change_percentage_24h||0;
+
+    market.innerHTML+=`
+      <tr class="${cls}">
+        <td>${c.name}</td>
+        <td>$${curr.toLocaleString()}</td>
+        <td class="${chg>=0?"up":"down"}">${chg.toFixed(2)}%</td>
+      </tr>`;
+  });
+
+  const t=new Date(apiTime);
+  lastUpdate.textContent=
+    "Last updated: "+
+    t.toLocaleTimeString("en-GB",{hour12:false})+
+    " · Auto-refresh enabled";
+
+ }catch{
+  lastUpdate.textContent="Market feed unavailable — retrying…";
+ }
+}
+
+loadPrices();
+setInterval(loadPrices,10000);
+</script>
+
+</body>
+  </html>
